@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>எளிய வட்டி கால்குலேடர்</h1>
+      <form action="">
+        <label for="amount">
+          தொகை :<input
+            type="text"
+            id="amount"
+            placeholder="தொகையை உள்ளிடவும்"
+          />
+        </label>
+
+        <label for="intrest">
+          வட்டி :
+          <input type="text" id="intrest" placeholder=" வட்டியை உள்ளிடவும்" />
+        </label>
+        <label for="year">
+          ஆண்டு:
+          <input type="text" id="year" placeholder=" ஆண்டை உள்ளிடவும்" />
+        </label>
+        <label for="month"
+          >மாதம்
+          <input type="text" id="month" placeholder=" மாதத்தை உள்ளிடவும்" />
+        </label>
+        <button type="submit" onclick="convert(event)">Calculate</button>
+      </form>
+    </div>
+    <div>
+      <h1 id="result"></h1>
+      <h1 id="total"></h1>
+    </div>
+    <script>
+      function convert(event) {
+        event.preventDefault();
+        const amount = Number(document.getElementById("amount").value);
+        const intrest = Number(document.getElementById("intrest").value);
+        const year = Number(document.getElementById("year").value);
+        const month = Number(document.getElementById("month").value);
+        const result = document.getElementById("result");
+        const total = document.getElementById("total");
+
+        if (amount <= 0 || intrest <= 0 || year < 0 || month < 0) {
+          result.innerHTML = "சரியான மதிப்புகளை உள்ளிடவும்";
+          return;
+        }
+        if (month > 11) {
+          result.innerHTML = "மாதம் 0 முதல் 11 வரை மட்டுமே இருக்க வேண்டும்";
+          return;
+        }
+        const totalMonth = year * 12 + month;
+        const perMonth = (amount * intrest) / 100;
+        const TotalIntrest = perMonth * totalMonth;
+        const totalmoney = amount + TotalIntrest;
+        result.innerHTML = `வட்டி : ${TotalIntrest}`;
+        total.innerHTML = `மொத்த தொகை : ${totalmoney}`;
+      }
+    </script>
+  </body>
+</html>
