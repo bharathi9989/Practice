@@ -27,6 +27,24 @@
 
       console.log(areaOfCircle(3));
       console.log(areaOfCircle(5));
+
+      arr.forEach((item) => console.log(item));
+      let arr2 = [99, 88, 88, 89, 99];
+
+      //  MAP
+      const DubaiCurrency = arr2.map((element) => element * 28.5);
+      console.log(`Dubai currency ${DubaiCurrency}`);
+
+      const student = arr2.map((element, index, array) => {
+        console.log("Element", element);
+        console.log("Index", index);
+        console.log("Array", array);
+      });
+
+      const student2 = arr2.map((marks, rollNo) => {
+        console.log("Element", marks);
+        console.log("Index", rollNo + 1);
+      });
     </script>
   </body>
 </html>
