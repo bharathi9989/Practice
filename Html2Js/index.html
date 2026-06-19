@@ -45,6 +45,49 @@
         console.log("Element", marks);
         console.log("Index", rollNo + 1);
       });
+
+      //   reduce
+      let answer = arr2.reduce((acc, curVal) => acc + curVal);
+      console.log(answer);
+
+      console.log(arr2);
+      let arr3 = [
+        ["a", "b", "c"],
+        ["d", "e", "f"],
+        ["a", "b", "c"],
+      ];
+      console.log(arr3);
+
+      let sort = arr3.flat();
+      console.log(sort);
+
+      let count = {};
+      //   const arrSort = sort.reduce((acc, curVal) => {
+      //     if (count[curVal]) {
+      //       count[curVal]++;
+      //     } else {
+      //       count[curVal] = 1;
+      //     }
+      //   });
+
+      //   console.log(count);
+
+      for (let val of sort) {
+        if (count[val]) {
+          count[val]++;
+        } else {
+          count[val] = 1;
+        }
+      }
+
+      console.log(count);
+      console.log(count);
+// Set Method
+      arr4 = [4, 6, 2, 3, 1, 1, 3, 5, 7, 8, 4, 3];
+      const unique = [...new Set(arr4)];
+      console.log(unique);
+    //   Filter
+    
     </script>
   </body>
 </html>
