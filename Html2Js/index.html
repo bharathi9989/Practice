@@ -1,13 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Mastering in Javascript</h1>
     <script>
-        
+      // Understanding of arrow function in javascript
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const sum = (arg) => {
+        let total = 0;
+        for (let val of arg) {
+          total += val;
+        }
+        return total;
+      };
+
+      console.log(sum(arr));
     </script>
-</body>
+  </body>
 </html>
