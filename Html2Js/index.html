@@ -138,9 +138,27 @@
       // for (let val of newVal.entries()) {
       //   console.log(val);
       // }
-      newVal.forEach((val,index) => {
-        console.log("foreach value is ",index , val);
+      newVal.forEach((val, index) => {
+        console.log("foreach value is ", index, val);
       });
+
+      // Map method
+      let map1 = new Map();
+      map1.set("a", 1);
+      map1.set("b", 1);
+      map1.set("c", 1);
+      console.log(map1);
+      map1.set("a", 5);
+      console.log(map1);
+      console.log(map1.has("b"));
+      console.log(map1.keys());
+      console.log(map1.values());
+
+      map1.forEach((k, v) => {
+        console.log("keys", k);
+        console.log("values", v);
+      });
+      
     </script>
   </body>
 </html>
