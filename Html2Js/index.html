@@ -109,6 +109,38 @@
       let add5 = add(5);
       console.log(add5);
       console.log(add5(6));
+
+      // SET METHOD
+
+      // set Object - Collection of values
+      // Values are Unique
+      let setArray = [1, 1, 2, 3, 4, 5, 5, 5, 5, 10, 8];
+
+      let newset = new Set(setArray);
+      console.log(setArray);
+      console.log(newset);
+      newset.add(11);
+      newset.add(12);
+      newset.add(13);
+      console.log(newset);
+
+      console.log(newset.has("apple"));
+      console.log(newset.has(13));
+      let newVal = new Set([10, 20, 30, 40, 50]);
+      console.log(newVal);
+      for (let val of newVal.values()) {
+        console.log(val);
+      }
+      for (let val of newVal.keys()) {
+        console.log(val);
+      }
+
+      // for (let val of newVal.entries()) {
+      //   console.log(val);
+      // }
+      newVal.forEach((val,index) => {
+        console.log("foreach value is ",index , val);
+      });
     </script>
   </body>
 </html>
