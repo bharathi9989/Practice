@@ -97,7 +97,18 @@
 
       let array1 = [1, 2, 3, 4, 5, 6];
 
-      console.log(array1.forEach((val) => val * 2))
+      // console.log(array1.forEach((val) => val * 2));
+
+      // Closure
+
+      function add(a) {
+        return function addofA(b) {
+          return a + b;
+        };
+      }
+      let add5 = add(5);
+      console.log(add5);
+      console.log(add5(6));
     </script>
   </body>
 </html>
